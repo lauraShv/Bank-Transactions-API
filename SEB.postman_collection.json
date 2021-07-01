@@ -154,7 +154,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "mCHhnPHcEVba7IeZsqiv",
+							"value": "kfrjYRezlXwmWsIhB7cu",
 							"type": "string"
 						}
 					]
@@ -235,6 +235,57 @@
 						"identified2",
 						"accounts",
 						"0b95727a-8967-452e-83d3-03fc07f9934d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gets account balances",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "mCHhnPHcEVba7IeZsqiv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/0b95727a-8967-452e-83d3-03fc07f9934d/balances",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"sebgroup",
+						"com"
+					],
+					"path": [
+						"ais",
+						"v7",
+						"identified2",
+						"accounts",
+						"0b95727a-8967-452e-83d3-03fc07f9934d",
+						"balances"
 					]
 				}
 			},
