@@ -53,7 +53,7 @@ def OAuth(client_id, client_secret, redirect_uri, scope):
 
 returned = OAuth(client_id, client_secret, redirect_uri, scope)
 access_token = returned['access_token']
-print(access_token)
+print('Access token: ' + access_token)
 
 
 # Function returns a list of a user´s accounts.
@@ -76,10 +76,11 @@ def accounts(x_request_id):
     info = json.loads(info)
     return info
 
-print(accounts(x_id))
-#returned2 = accounts(x_id)
-#user_id = returned2.get('accounts', {}).get('recourceID')
-#print(user_id)
+account_list = accounts(x_id)
+print(account_list)
+
+# From the account_list printed above, select a recourceId and copy&paste in the input.
+user_id = input('Enter user_id:')
 
 # Function returns detailed account information, potentially including balances for one 
 # specific account.
@@ -114,7 +115,7 @@ def account_balance(x_request_id, account):
     res = conn.getresponse()
     data = res.read()
 
-    print(data.decode("utf-8"))
+    return data.decode("utf-8")
 
 
 # Function returns a list of transactions for one specific account.
@@ -135,9 +136,6 @@ def account_transactions(x_request_id, account):
     return data.decode("utf-8")
 
 
-
 print(account_id(x_id, user_id))
 print(account_balance(x_id, user_id))
 print(account_transactions(x_id, user_id))
-
-
