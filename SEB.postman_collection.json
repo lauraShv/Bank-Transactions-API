@@ -18,7 +18,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "mCHhnPHcEVba7IeZsqiv",
+							"value": "f6PsxIz7EoCFCM1Cemck",
 							"type": "string"
 						}
 					]
@@ -37,7 +37,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/0b95727a-8967-452e-83d3-03fc07f9934d/transactions?bookingStatus=booked",
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/5a59028c-e757-4f22-b88c-3ba90573383c/transactions?bookingStatus=booked",
 					"protocol": "https",
 					"host": [
 						"api-sandbox",
@@ -49,7 +49,7 @@
 						"v7",
 						"identified2",
 						"accounts",
-						"0b95727a-8967-452e-83d3-03fc07f9934d",
+						"5a59028c-e757-4f22-b88c-3ba90573383c",
 						"transactions"
 					],
 					"query": [
@@ -69,28 +69,33 @@
 					"type": "oauth2",
 					"oauth2": [
 						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "clientId",
+							"value": "VpxC64Rh4FjolBzJEHk4",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
 							"key": "tokenName",
 							"value": "GetSebToken",
 							"type": "string"
 						},
 						{
-							"key": "state",
-							"value": "Sandbox",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "psd2_accounts psd2_payments",
-							"type": "string"
-						},
-						{
 							"key": "clientSecret",
 							"value": "MyqmHnKuWxp1vcsA0LzC",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "VpxC64Rh4FjolBzJEHk4",
 							"type": "string"
 						},
 						{
@@ -124,11 +129,6 @@
 							"type": "string"
 						},
 						{
-							"key": "useBrowser",
-							"value": false,
-							"type": "boolean"
-						},
-						{
 							"key": "headerPrefix",
 							"value": "Bearer",
 							"type": "string"
@@ -136,7 +136,20 @@
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
 				"url": null
 			},
 			"response": []
@@ -154,7 +167,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "kfrjYRezlXwmWsIhB7cu",
+							"value": "f6PsxIz7EoCFCM1Cemck",
 							"type": "string"
 						}
 					]
@@ -203,7 +216,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "mCHhnPHcEVba7IeZsqiv",
+							"value": "f6PsxIz7EoCFCM1Cemck",
 							"type": "string"
 						}
 					]
@@ -222,7 +235,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/0b95727a-8967-452e-83d3-03fc07f9934d",
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/5a59028c-e757-4f22-b88c-3ba90573383c",
 					"protocol": "https",
 					"host": [
 						"api-sandbox",
@@ -234,7 +247,7 @@
 						"v7",
 						"identified2",
 						"accounts",
-						"0b95727a-8967-452e-83d3-03fc07f9934d"
+						"5a59028c-e757-4f22-b88c-3ba90573383c"
 					]
 				}
 			},
@@ -253,7 +266,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "mCHhnPHcEVba7IeZsqiv",
+							"value": "f6PsxIz7EoCFCM1Cemck",
 							"type": "string"
 						}
 					]
@@ -272,7 +285,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/0b95727a-8967-452e-83d3-03fc07f9934d/balances",
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/5a59028c-e757-4f22-b88c-3ba90573383c",
 					"protocol": "https",
 					"host": [
 						"api-sandbox",
@@ -284,8 +297,7 @@
 						"v7",
 						"identified2",
 						"accounts",
-						"0b95727a-8967-452e-83d3-03fc07f9934d",
-						"balances"
+						"5a59028c-e757-4f22-b88c-3ba90573383c"
 					]
 				}
 			},
