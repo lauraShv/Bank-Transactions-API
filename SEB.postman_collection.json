@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "fd4bb816-00c9-46cb-a5ac-d3eced2fe6d1",
+		"_postman_id": "a0188df8-95bd-4c63-984f-c42bd41baead",
 		"name": "SEB",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Gets account transactions",
+			"name": "account",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true
@@ -14,63 +14,26 @@
 			},
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "f6PsxIz7EoCFCM1Cemck",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Request-ID",
-						"value": "123",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/5a59028c-e757-4f22-b88c-3ba90573383c/transactions?bookingStatus=booked",
-					"protocol": "https",
-					"host": [
-						"api-sandbox",
-						"sebgroup",
-						"com"
-					],
-					"path": [
-						"ais",
-						"v7",
-						"identified2",
-						"accounts",
-						"5a59028c-e757-4f22-b88c-3ba90573383c",
-						"transactions"
-					],
-					"query": [
-						{
-							"key": "bookingStatus",
-							"value": "booked"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Gets access token",
-			"request": {
-				"auth": {
 					"type": "oauth2",
 					"oauth2": [
 						{
-							"key": "scope",
-							"value": "",
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5g5uePAG1Wtmom6YWi5b",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "kHWu0EHUCrd3x8ZJ6iBv",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost.com/",
 							"type": "string"
 						},
 						{
@@ -79,8 +42,8 @@
 							"type": "boolean"
 						},
 						{
-							"key": "clientId",
-							"value": "VpxC64Rh4FjolBzJEHk4",
+							"key": "scope",
+							"value": "psd2_accounts psd2_payments",
 							"type": "string"
 						},
 						{
@@ -89,33 +52,13 @@
 							"type": "string"
 						},
 						{
-							"key": "tokenName",
-							"value": "GetSebToken",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "MyqmHnKuWxp1vcsA0LzC",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "queryParams",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
 							"key": "client_authentication",
 							"value": "body",
 							"type": "string"
 						},
 						{
-							"key": "accessTokenUrl",
-							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+							"key": "tokenName",
+							"value": "My Token",
 							"type": "string"
 						},
 						{
@@ -124,64 +67,27 @@
 							"type": "string"
 						},
 						{
-							"key": "redirect_uri",
-							"value": "https://locallhost.com/",
-							"type": "string"
-						},
-						{
-							"key": "headerPrefix",
-							"value": "Bearer",
+							"key": "accessTokenUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
 				"header": [
-					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "Gets an account",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"accept": true
-				}
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "f6PsxIz7EoCFCM1Cemck",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					},
 					{
 						"key": "X-Request-ID",
 						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "PSU-Corporate-Id",
+						"value": "40073144970009",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
 						"type": "text"
 					}
 				],
@@ -204,7 +110,7 @@
 			"response": []
 		},
 		{
-			"name": "Gets more account info ",
+			"name": "account info",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true
@@ -212,11 +118,61 @@
 			},
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
+					"type": "oauth2",
+					"oauth2": [
 						{
-							"key": "token",
-							"value": "f6PsxIz7EoCFCM1Cemck",
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5g5uePAG1Wtmom6YWi5b",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "kHWu0EHUCrd3x8ZJ6iBv",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost.com/",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "psd2_accounts psd2_payments",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "My Token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
 							"type": "string"
 						}
 					]
@@ -232,10 +188,15 @@
 						"key": "X-Request-ID",
 						"value": "123",
 						"type": "text"
+					},
+					{
+						"key": "PSU-Corporate-Id",
+						"value": "40073144970009",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/5a59028c-e757-4f22-b88c-3ba90573383c",
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/9ce54236-3f83-47ab-846f-a92d4df49b73",
 					"protocol": "https",
 					"host": [
 						"api-sandbox",
@@ -247,14 +208,14 @@
 						"v7",
 						"identified2",
 						"accounts",
-						"5a59028c-e757-4f22-b88c-3ba90573383c"
+						"9ce54236-3f83-47ab-846f-a92d4df49b73"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Gets account balances",
+			"name": "account balances",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true
@@ -262,11 +223,61 @@
 			},
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
+					"type": "oauth2",
+					"oauth2": [
 						{
-							"key": "token",
-							"value": "f6PsxIz7EoCFCM1Cemck",
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5g5uePAG1Wtmom6YWi5b",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "kHWu0EHUCrd3x8ZJ6iBv",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost.com/",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "psd2_accounts psd2_payments",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "My Token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
 							"type": "string"
 						}
 					]
@@ -282,10 +293,15 @@
 						"key": "X-Request-ID",
 						"value": "123",
 						"type": "text"
+					},
+					{
+						"key": "PSU-Corporate-Id",
+						"value": "40073144970009",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/5a59028c-e757-4f22-b88c-3ba90573383c",
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/9ce54236-3f83-47ab-846f-a92d4df49b73/balances",
 					"protocol": "https",
 					"host": [
 						"api-sandbox",
@@ -297,7 +313,120 @@
 						"v7",
 						"identified2",
 						"accounts",
-						"5a59028c-e757-4f22-b88c-3ba90573383c"
+						"9ce54236-3f83-47ab-846f-a92d4df49b73",
+						"balances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account transactions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5g5uePAG1Wtmom6YWi5b",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "kHWu0EHUCrd3x8ZJ6iBv",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost.com/",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "psd2_accounts psd2_payments",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "My Token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "PSU-Corporate-Id",
+						"value": "40073144970009",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/9ce54236-3f83-47ab-846f-a92d4df49b73/transactions?bookingStatus=booked",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"sebgroup",
+						"com"
+					],
+					"path": [
+						"ais",
+						"v7",
+						"identified2",
+						"accounts",
+						"9ce54236-3f83-47ab-846f-a92d4df49b73",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "bookingStatus",
+							"value": "booked"
+						}
 					]
 				}
 			},
